@@ -1,0 +1,26 @@
+# Core LangChain & AI Dependencies
+langchain==0.2.1
+langchain-ibm==0.1.7
+langchain-community==0.0.59
+langchain-experimental==0.0.59
+
+# IBM Watson AI
+ibm-watsonx-ai==1.0.4
+ibm-watson-machine-learning==1.0.357
+
+# Database
+mysql-connector-python==8.4.0
+sqlalchemy>=2.0.0
+
+# Environment & Configuration
+python-dotenv>=1.0.0
+
+# Utilities
+requests>=2.31.0
+
+# Development (optional)
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.0.0
+flake8>=6.0.0
+

@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-powered-sql-agent"
+version = "1.0.0"
+description = "Transform natural language questions into SQL queries using AI"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "Altuğ Yerli", email = "99094570+altugyerli@users.noreply.github.com"}
+]
+keywords = ["sql", "ai", "langchain", "nlq", "database", "agent"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Database",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "langchain==0.2.1",
+    "langchain-ibm==0.1.7",
+    "langchain-community==0.0.59",
+    "langchain-experimental==0.0.59",
+    "ibm-watsonx-ai==1.0.4",
+    "ibm-watson-machine-learning==1.0.357",
+    "mysql-connector-python==8.4.0",
+    "sqlalchemy>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/altugyerli/Ai-powerred-sql-agent"
+Repository = "https://github.com/altugyerli/Ai-powerred-sql-agent.git"
+Issues = "https://github.com/altugyerli/Ai-powerred-sql-agent/issues"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=. --cov-report=html"
+
